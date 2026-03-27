@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Portfolio Loaded");
+    console.log("Portfolio Loaded Successfully ✅");
 });
