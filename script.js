@@ -1,4 +1,4 @@
-// Smooth scrolling
+// Smooth scrolling for navbar clicks
 document.querySelectorAll("a[href^='#']").forEach(link => {
     link.addEventListener("click", function(e) {
         e.preventDefault();
