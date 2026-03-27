@@ -4,42 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taher Parvez | Portfolio</title>
-    style.css
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ✅ NAVBAR -->
+    <!-- ✅ NAVIGATION BAR -->
     <nav class="navbar">
         <div class="logo">TP.</div>
+
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        Hire Me</a>
+
+        <a href="#contact" class="hire-btn">Hire Me</a>
     </nav>
 
     <!-- ✅ HERO SECTION -->
-    <header class="hero">
+    <header class="hero" id="home">
 
+        <!-- LEFT SIDE CONTENT -->
         <div class="hero-left">
-            <h1 class="hero-title">I'm Operations & Supply Chain Professional<br><span class="highlight">Taher Parvez</span></h1>
+
+            <!-- Social icons -->
+            <div class="social-icons">
+                <a href="YOUR-LINKEDIN-URL" target="_blank">in</a>
+                <a href="YOUR-INSTAGRAM-URL" target="_blank">📷</a>
+                <a href="#" target="_blank">◎</a>
+                <a href="#" target="_blank">Be</a>
+            </div>
+
+            <h1 class="hero-title">
+                I'm Operations & Supply Chain Professional <br>
+                <span class="highlight">Taher Parvez</span>
+            </h1>
 
             <p class="hero-text">
-                Warehouse Senior Supervisor with 5+ years in logistics optimization, cost savings, 
-                process improvements, and digital transformation using Power BI & automation.
+                Specialist in Warehouse Ops, Digital Transformation, Cost Saving Projects,
+                and Power BI Analytics with 5+ years of measurable impact.
             </p>
 
-            Taher-Resume.pdfDownload Resume</a>
+            <a href="#about" class="learn-btn">Learn More</a>
         </div>
 
+        <!-- RIGHT SIDE IMAGE -->
         <div class="hero-right">
-            taher.jpeg
+            <img src="taher.jpeg" alt="Profile Photo">
         </div>
 
     </header>
+
+    <!-- ✅ ABOUT SECTION -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a results-driven warehouse & logistics professional with 5+ years of experience
+            in Inventory Management, Process Optimization, Cost-saving initiatives, and
+            implementing Digital Transformation tools like Power BI & automation dashboards.
+        </p>
+    </section>
+
+    <!-- ✅ PORTFOLIO SECTION -->
+    <section id="portfolio" class="section">
+        <h2>Portfolio / Experience</h2>
+
+        <div class="card">
+            <h3>Experience</h3>
+            <ul>
+                <li>Warehouse Senior Supervisor – Maersk (2023–Present)</li>
+                <li>Operations Supervisor – YCH Group (2022–2023)</li>
+                <li>Operations Supervisor – Sankyu Pte Ltd (2020–2022)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Projects</h3>
+            <ul>
+                <li>40% space utilization improvement via pallet consolidation</li>
+                <li>Power BI dashboards for visibility & KPIs</li>
+                <li>Lean projects achieving 25% efficiency gains</li>
+                <li>Cost savings through procurement optimization</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Skills</h3>
+            <ul>
+                <li>Warehouse Operations</li>
+                <li>Inventory & Space Optimization</li>
+                <li>Lean / 5S Improvements</li>
+                <li>Power BI Reporting & Automation</li>
+                <li>Team Leadership & Training</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ✅ CONTACT SECTION -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <strong>Ajjuparvez456@gmail.com</strong></p>
+        <p>Phone: <strong>+65-97270035</strong></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Taher Parvez. All Rights Reserved.</p>
+    </footer>
 
 <script src="script.js"></script>
 </body>
