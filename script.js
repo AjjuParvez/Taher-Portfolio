@@ -1,6 +1,6 @@
-// Smooth scrolling for navbar clicks
+// Smooth scrolling
 document.querySelectorAll("a[href^='#']").forEach(link => {
-    link.addEventListener("click", function(e) {
+    link.addEventListener("click", function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute("href"));
         if (target) {
