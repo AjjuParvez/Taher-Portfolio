@@ -39,8 +39,8 @@ body {
 
 .hire-btn {
     background: #ff5c5c;
+    color: #fff;
     padding: 10px 20px;
-    color: white;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
@@ -55,7 +55,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* ICONS */
+/* ONLY LINKEDIN + INSTAGRAM ICONS */
 .social-icons {
     display: flex;
     flex-direction: column;
@@ -63,8 +63,8 @@ body {
 }
 
 .icon {
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
 }
 
 /* LEFT SECTION */
@@ -72,7 +72,7 @@ body {
     flex: 1 1 420px;
 }
 
-/* RIGHT SECTION */
+/* RIGHT SECTION IMAGE */
 .hero-right img {
     width: 300px;
     border-radius: 12px;
@@ -124,6 +124,7 @@ footer {
     text-align: center;
     padding: 20px;
     background: #eee;
+    margin-top: 40px;
 }
 
 /* ✅ MOBILE FIXES */
@@ -137,7 +138,7 @@ footer {
 
     .hero-right img {
         order: -1;
-        width: 260px;
+        width: 250px;
         margin-bottom: 25px;
     }
 
@@ -150,5 +151,9 @@ footer {
 
     .hero-title {
         font-size: 32px;
+    }
+
+    .nav-links {
+        gap: 20px;
     }
 }
