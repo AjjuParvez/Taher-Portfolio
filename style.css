@@ -1,245 +1,312 @@
-/* ---------------------------------------------------
-   GLOBAL STYLES
---------------------------------------------------- */
-body {
+/* 🌟 GLOBAL RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background: #ffffff;
     color: #222;
-}
-
-h1, h2, h3, h4 {
-    margin: 0;
-    font-weight: bold;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* ---------------------------------------------------
-   NAVBAR
---------------------------------------------------- */
-.navbar {
     background: #ffffff;
-    padding: 16px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ✅ FIXED NAVBAR */
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 50;
-}
+    z-index: 999;
 
-.nav-brand {
-    font-size: 22px;
-    font-weight: bold;
-    color: #0d1b2a;
-}
-
-.nav-menu {
     display: flex;
-    gap: 30px;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e6e6e6;
 }
 
-.nav-menu a {
-    color: #0d1b2a;
-    font-size: 16px;
+.logo {
+    font-size: 28px;
     font-weight: bold;
+    color: #0033aa;
 }
 
-.navbar .cta-btn {
-    background: #ff6b6b;
-    padding: 10px 18px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.talk-btn {
+    background: #7a42f5;
+    padding: 10px 22px;
     border-radius: 6px;
     color: white;
-    font-weight: bold;
+    text-decoration: none;
 }
 
-/* ---------------------------------------------------
-   HERO SECTION
---------------------------------------------------- */
+/* ✅ HERO (HOME PAGE ONLY) */
 .hero {
-    padding: 160px 80px 80px;
-    display: grid;
-    grid-template-columns: 1fr 300px;   /* ✅ Big content + small image */
-    gap: 60px;
-    align-items: center;
-}
-
-.hero-left {
-    width: 100%;
-}
-
-.social-icons {
     display: flex;
-    gap: 14px;
-    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 140px 60px 40px;   /* ✅ Reduced top spacing */
+    gap: 35px;
+    flex-wrap: wrap;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.55),
+            rgba(255,255,255,0.55)
+        ),
+        url("warehouse-home.jpeg.jpg") center/cover no-repeat;
 }
 
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
+/* ✅ LEFT SIDE TEXT */
+.hero-left {
+    flex: 1 1 48%;
+    min-width: 300px;
 }
 
-.name {
-    font-size: 42px;
-    line-height: 50px;
-    margin-bottom: 10px;
+.hero-title {
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1.2;
 }
 
 .highlight {
-    color: #007bff;
+    color: #7a42f5;
 }
 
-.tagline {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 20px;
-    line-height: 26px;
+.hero-text {
+    font-size: 16px;
+    margin: 20px 0;
+    max-width: 480px;
 }
 
-.btn-primary {
-    background: #007bff;
+/* ✅ BUTTONS */
+.resume-btn,
+.learn-btn {
     padding: 12px 22px;
-    color: white;
     border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.resume-btn {
+    background: #0033aa;
+    color: white;
     margin-right: 10px;
-    display: inline-block;
 }
 
-.btn-secondary {
-    background: #ff6b6b;
-    padding: 12px 22px;
+.learn-btn {
+    background: #ff5c5c;
     color: white;
-    border-radius: 6px;
-    display: inline-block;
 }
 
+/* ✅ RIGHT SIDE IMAGE */
 .hero-right {
+    flex: 1 1 38%;
+    text-align: right;
+    min-width: 260px;
+}
+
+.profile-img {
+    width: 310px;               /* ✅ Reduced so icons fit */
+    border-radius: 14px;
+}
+
+/* ✅ DESKTOP ICONS */
+.desktop-icons {
     display: flex;
     justify-content: flex-end;
+    gap: 14px;
+    margin-top: 12px;           /* ✅ Reduced */
 }
 
-.profile-pic {
-    width: 240px;        /* ✅ Smaller image */
-    height: 240px;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+.icon {
+    width: 26px;
+    height: 26px;
 }
 
-/* ---------------------------------------------------
-   SECTION BASE
---------------------------------------------------- */
-.section {
-    padding: 80px 80px;
-}
-
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 25px;
-    color: #0d1b2a;
-}
-
-/* ---------------------------------------------------
-   ABOUT
---------------------------------------------------- */
-.about p {
-    font-size: 18px;
-    line-height: 28px;
-    max-width: 900px;
-}
-
-/* ---------------------------------------------------
-   SKILLS
---------------------------------------------------- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);   /* ✅ Big desktop grid */
-    gap: 25px;
-}
-
-.skill-card {
-    background: #e8e8e8;
-    padding: 20px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* ---------------------------------------------------
-   EXPERIENCE + PROJECT CARDS
---------------------------------------------------- */
-.exp-card, .project-card {
-    background: #f3f3f3;
-    padding: 25px;
-    border-radius: 10px;
+/* ✅ MOBILE ICONS */
+.mobile-icons {
+    display: none;
+    justify-content: center;
+    gap: 20px;
     margin-bottom: 20px;
 }
 
-/* ---------------------------------------------------
-   FOOTER
---------------------------------------------------- */
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #0d1b2a;
-    color: #fff;
+/* ✅ OTHER SECTIONS (ABOUT / PORTFOLIO / CONTACT) */
+.section {
+    padding: 80px 20px;
+    background: #f5f6fa;        /* ✅ Soft contrast background */
+    border-top: 1px solid #e6e6e6;
 }
 
-/* ---------------------------------------------------
-   ✅ MOBILE FIX BELOW (Do NOT Change)
---------------------------------------------------- */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* ✅ MOBILE FIXES */
 @media (max-width: 768px) {
 
-    .navbar {
-        padding: 16px 20px;
-    }
-
     .hero {
-        grid-template-columns: 1fr;
-        padding: 140px 20px 40px;
+        flex-direction: column;
         text-align: center;
+
+        /* ✅ FIX: Add extra padding so header does NOT overlap */
+        padding: 220px 20px 40px;  
+        /* ↑ increased from 180px → 220px */
+
+        background:
+            linear-gradient(
+                rgba(255,255,255,0.6),
+                rgba(255,255,255,0.6)
+            ),
+            url("warehouse-home.jpeg.jpg") center/cover no-repeat;
     }
 
-    .hero-left {
-        order: 2;
-    }
-
-    .hero-right {
-        order: 1;
-        justify-content: center;
-    }
-
-    .profile-pic {
-        width: 170px;
-        height: 170px;
-        border-radius: 18px;
+    .profile-img {
+        width: 260px;
         margin-bottom: 20px;
     }
 
-    .name {
-        font-size: 28px;
-        line-height: 34px;
+    .desktop-icons { display: none; }
+
+    .mobile-icons { display: flex; }
+
+    .hero-title {
+        font-size: 32px;
+    }
+}
+/* ✅ ABOUT PAGE PREMIUM LAYOUT */
+.about-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 36px;
+    color: #333;
+}
+
+.about-section {
+    background: #f5f7fb;       /* soft contrast */
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* LEFT IMAGE */
+.about-left {
+    flex: 1 1 28%;
+    text-align: center;
+}
+
+.about-photo {
+    width: 80%;
+    max-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* CENTER TEXT */
+.about-center {
+    flex: 1 1 35%;
+}
+
+.about-center h3,
+.about-right h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #1c1c1c;
+}
+
+.about-center p,
+.about-right p {
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* RIGHT TEXT */
+.about-right {
+    flex: 1 1 28%;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ✅ SKILLS SECTION */
+.skills-section {
+    margin-top: 30px;
+}
+
+.skills-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.skill {
+    margin-bottom: 18px;
+}
+
+.skill span {
+    font-weight: bold;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background: #e3e6ef;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+.bar div {
+    height: 100%;
+    background: linear-gradient(90deg, #7A42F5, #FF5C5C);
+    border-radius: 10px;
+}
+
+/* ✅ MOBILE VIEW */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .social-icons {
-        justify-content: center;
+    .about-left, .about-center, .about-right {
+        flex: 1 1 100%;
     }
 
-    .section {
-        padding: 50px 20px;
+    .about-photo {
+        max-width: 220px;
+        margin: 0 auto 20px;
     }
 
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+    .skills-section {
+        text-align: center;
     }
 }
