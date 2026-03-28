@@ -1,9 +1,9 @@
-/* GLOBAL */
+/* BACKGROUND */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background: url("warehouse-bg.jpeg") center/cover no-repeat fixed;
     color: #222;
-    background: url("warehouse-bg.jpg") center/cover no-repeat fixed;
 }
 
 /* ✅ NAVBAR */
@@ -12,23 +12,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 60px;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(6px);
 }
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #0033aa;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 32px;
-}
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-}
+.logo { font-size: 28px; font-weight: bold; color: #0033aa; }
+.nav-links { list-style: none; display: flex; gap: 32px; }
+.nav-links a { text-decoration: none; color: #333; }
 .talk-btn {
     background: #7a42f5;
     padding: 10px 22px;
@@ -47,54 +36,37 @@ body {
     flex-wrap: wrap;
 }
 
-/* LEFT SIDE */
+/* ✅ LEFT TEXT */
 .hero-left {
     flex: 1 1 48%;
     min-width: 300px;
 }
+.hero-title { font-size: 46px; font-weight: bold; }
+.highlight { color: #7a42f5; }
+.hero-text { max-width: 480px; margin: 20px 0; }
 
-.hero-title {
-    font-size: 46px;
-    font-weight: bold;
-}
-.highlight {
-    color: #7a42f5;
-}
-.hero-text {
-    max-width: 480px;
-    margin: 20px 0;
-}
-
-/* BUTTONS */
+/* ✅ BUTTONS */
 .resume-btn, .learn-btn {
     padding: 12px 22px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    margin-right: 10px;
 }
-.resume-btn {
-    background: #0033aa;
-    color: white;
-}
-.learn-btn {
-    background: #ff5c5c;
-    color: white;
-}
+.resume-btn { background: #0033aa; color: white; margin-right: 10px; }
+.learn-btn { background: #ff5c5c; color: white; }
 
-/* ✅ RIGHT SIDE */
+/* ✅ RIGHT IMAGE */
 .hero-right {
     flex: 1 1 38%;
     text-align: right;
-    min-width: 280px;
+    min-width: 260px;
 }
 .profile-img {
     width: 350px;
-    border-radius: 20px;
+    border-radius: 14px;
 }
 
-/* ✅ DESKTOP ICONS BELOW */
+/* ✅ DESKTOP ICONS */
 .desktop-icons {
     display: flex;
     justify-content: flex-end;
@@ -106,7 +78,7 @@ body {
     height: 30px;
 }
 
-/* ✅ MOBILE ICONS CENTERED */
+/* ✅ MOBILE ICONS */
 .mobile-icons {
     display: none;
     justify-content: center;
@@ -114,12 +86,8 @@ body {
     margin-bottom: 20px;
 }
 
-/* ✅ MOBILE VIEW FIXES */
+/* ✅ MOBILE FIXES */
 @media (max-width: 768px) {
-
-    body {
-        background: url("warehouse-bg.jpg") center/cover no-repeat fixed;
-    }
 
     .hero {
         flex-direction: column;
@@ -132,15 +100,9 @@ body {
         margin-bottom: 20px;
     }
 
-    .desktop-icons {
-        display: none;
-    }
+    .desktop-icons { display: none; }
 
-    .mobile-icons {
-        display: flex;
-    }
+    .mobile-icons { display: flex; }
 
-    .hero-title {
-        font-size: 32px;
-    }
+    .hero-title { font-size: 32px; }
 }
