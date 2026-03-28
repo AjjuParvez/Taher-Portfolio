@@ -235,16 +235,16 @@ body {
         flex-direction: column-reverse;
         text-align: center;
 
-        padding-top: 50px;   /* ✅ Moved UP */
-        padding-bottom: 30px;
+        padding-top: 40px;   /* ✅ Moved UP */
+        padding-bottom: 20px;
         padding-left: 20px;
         padding-right: 20px;
     }
 
 /* ✅ Reduce Home Page Hero Title on Mobile */
 .hero-title{
-    font-size: 24px !important;
-    line-height: 30px !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
     font-weight: bold;
 }
 
