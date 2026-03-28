@@ -121,8 +121,8 @@ display:inline-block;
         flex-direction: column-reverse;   /* image first */
         text-align: center;
 
-        padding-top: 300px;   /* ✅ increased so About Me does NOT show */
-        padding-bottom: 100px;
+        padding-top: 280px;   /* ✅ increased so About Me does NOT show */
+        padding-bottom: 80px;
         padding-left: 20px;
         padding-right: 20px;
     }
