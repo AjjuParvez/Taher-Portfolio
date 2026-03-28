@@ -1,4 +1,4 @@
-/* 🌟 GLOBAL RESET */
+/* 🌟 RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:Arial,sans-serif;color:#222;background:#fff;}
 
@@ -16,9 +16,13 @@ backdrop-filter:blur(10px);border-bottom:1px solid #e6e6e6;}
 .hero{
 display:flex;justify-content:space-between;align-items:center;
 padding:160px 40px 60px;flex-wrap:wrap;
-background:linear-gradient(rgba(255,255,255,0.55),rgba(255,255,255,0.55)),
+
+/* ✅ FIXED BACKGROUND */
+background:
+linear-gradient(rgba(255,255,255,0.55),rgba(255,255,255,0.55)),
 url("warehouse-home.jpeg") center/cover no-repeat;
 }
+
 .hero-left{flex:1 1 48%;}
 .hero-title{font-size:42px;font-weight:bold;}
 .highlight{color:#7a42f5;}
@@ -26,9 +30,11 @@ url("warehouse-home.jpeg") center/cover no-repeat;
 .resume-btn,.learn-btn{padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:bold;}
 .resume-btn{background:#0033aa;color:#fff;margin-right:10px;}
 .learn-btn{background:#ff5c5c;color:#fff;}
+
 .hero-right{text-align:right;flex:1 1 38%;}
 .profile-img{width:280px;border-radius:12px;}
-.desktop-icons{display:none;} /* ✅ Removed icons from home */
+
+.desktop-icons{display:none;}
 .mobile-icons{display:none;}
 
 /* ✅ ABOUT SECTION */
@@ -40,54 +46,80 @@ display:flex;gap:30px;align-items:flex-start;
 max-width:1200px;margin:auto;
 }
 
-/* ✅ LEFT */
-.about-left-full{text-align:center;flex:1 1 28%;}
+/* LEFT */
+.about-left-full{
+flex:1 1 30%;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
 .about-photo{
-width:150px;border-radius:12px;
-margin-top:-20px;margin-bottom:10px;
+width:150px;
+border-radius:12px;
+margin-top:-20px;
 box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* ✅ SKILLS */
+/* SKILLS */
 .skills-under-photo{
-width:90%;margin:10px auto 0 auto;text-align:left;
+width:100%;
+margin-top:20px;
+text-align:left;
 }
+
 .skill-title{font-size:16px;font-weight:bold;margin-bottom:10px;}
-.skill{margin-bottom:10px;}
+
+.skill{margin-bottom:12px;}
 .skill span{font-weight:bold;}
-.bar{height:7px;background:#e3e6ef;border-radius:7px;margin-top:6px;}
-.bar div{height:100%;background:linear-gradient(90deg,#7A42F5,#FF5C5C);border-radius:7px;}
+
+.bar{
+height:7px;background:#e3e6ef;border-radius:7px;margin-top:6px;
+}
+.bar div{
+height:100%;background:linear-gradient(90deg,#7A42F5,#FF5C5C);
+border-radius:7px;
+}
 
 /* ✅ RIGHT SIDE */
 .about-right-full{flex:1 1 65%;margin-top:0;}
 .about-columns{display:flex;gap:30px;flex-wrap:wrap;}
 .about-block{flex:1 1 48%;}
+
 .about-block h3{font-size:18px;margin-bottom:10px;}
 .about-block p{margin-bottom:10px;color:#444;line-height:1.6;}
 
-/* ✅ SOCIAL ICONS */
-.social-links{display:flex;gap:10px;margin:10px 0;}
-.social-links img{width:24px;height:24px;}
+.social-links{
+display:flex;gap:10px;margin:10px 0;
+}
+.social-links img{
+width:24px;height:24px;
+}
 
-/* ✅ CV BUTTON FIXED */
-.about-cv-btn{
-margin-top:22px;
+/* CV BUTTON */
+.cv-btn{
+margin-top:20px !important;
 display:inline-block;
 }
 
-/* ✅ ✅ MOBILE FIX */
+/* ✅✅ MOBILE VIEW */
 @media(max-width:768px){
 
-.hero{text-align:center;padding:220px 20px 60px;flex-direction:column;}
-.profile-img{width:200px;margin:0 auto 20px;}
+.hero{
+text-align:center;padding:220px 20px 60px;flex-direction:column;
+}
 
+.profile-img{
+width:220px;margin:auto;margin-top:20px;
+}
+
+/* ✅ About layout: picture LEFT, skills RIGHT */
 .about-wrapper{
 flex-direction:column;
 text-align:center;
-padding:0 10px;
+width:100%;
 }
 
-/* ✅ Picture + skills → 2‑column mobile layout */
 .about-left-full{
 display:flex;
 flex-direction:row;
@@ -102,14 +134,11 @@ width:120px;margin:0;
 
 .skills-under-photo{
 text-align:left;
-margin:0;
+margin-top:5px;
 }
 
-.skill-title{text-align:left;}
-
-/* ✅ About text below */
 .about-right-full{
-margin-top:30px;
+margin-top:25px;
 text-align:center;
 }
 
@@ -121,8 +150,8 @@ flex-direction:column;
 justify-content:center;
 }
 
-.about-cv-btn{
-margin:15px auto;
+.cv-btn{
+margin:20px auto !important;
 }
 
 }
