@@ -243,14 +243,14 @@ body {
 
 /* ✅ Reduce Home Page Hero Title on Mobile */
 .hero-title{
-    font-size: 14px !important;
-    line-height: 14px !important;
+    font-size: 16px !important;
+    line-height: 16px !important;
     font-weight: bold;
 }
 
     .profile-img {
         width: 260px;   /* ✅ enlarge */
-        margin: 0 auto 10px auto;
+        margin: 0 auto 20px auto;
         order: -1;      /* ✅ picture first */
     }
 
@@ -259,8 +259,8 @@ body {
     .learn-btn {
         display: block;
         width:80%;
-        max-width: 200px;
-        margin: 8px auto;
+        max-width: 160px;
+        margin: 6px auto;
     }
 
     /* ✅ ABOUT PAGE MOBILE */
