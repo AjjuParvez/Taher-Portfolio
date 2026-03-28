@@ -226,45 +226,45 @@ body {
     display: inline-block;
 }
 
-/* ✅✅ MOBILE VIEW (FINAL FIXED HOME + ABOUT) */
-@media(max-width:768px) {
+/* ✅✅ MOBILE VIEW (FINAL HOME FIX) */
+@media(max-width:768px){
 
-    /* ✅ HERO — Move ALL content UP, image FIRST */
+    /* ✅ HERO – Perfect vertical alignment */
     .hero {
         display: flex;
-        flex-direction: column-reverse; /* ✅ Image at top */
+        flex-direction: column-reverse;  /* Image first */
         text-align: center;
 
-        padding-top: 110px !important;  /* ✅ pulled UP */
-        padding-bottom: 80px !important;
+        padding-top: 140px !important;   /* ✅ Balanced top spacing */
+        padding-bottom: 100px !important; /* ✅ Ensures buttons fully show */
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    /* ✅ Bigger & clean spacing */
+    /* ✅ Enlarged Picture + Moved Up */
     .profile-img {
-        width: 260px;
-        margin: 0 auto 15px auto;
-        order: -1; /* ✅ Image first */
+        width: 260px;               /* Big & clear */
+        margin: 0 auto 12px auto;   /* Reduced spacing */
+        order: -1;                  /* Image always FIRST */
     }
 
-    /* ✅ Mobile title size */
+    /* ✅ Mobile Title Formatting */
     .hero-title {
-        font-size: 26px !important;
-        line-height: 30px !important;
-        font-weight: bold;
+        font-size: 24px !important;
+        line-height: 28px !important;
+        margin-top: 0px !important;
     }
 
-    /* ✅ Buttons perfectly visible */
+    /* ✅ Buttons fully visible on screen */
     .resume-btn,
     .learn-btn {
         display: block;
         width: 80%;
         max-width: 200px;
-        margin: 8px auto;
+        margin: 8px auto;  
     }
 
-    /* ✅ ABOUT SECTION - Mobile Layout */
+    /* ✅ ABOUT PAGE MOBILE */
     .about-wrapper {
         flex-direction: column;
         width: 100%;
@@ -272,7 +272,7 @@ body {
         text-align: center;
     }
 
-    /* ✅ Picture LEFT - Skills RIGHT */
+    /* ✅ Picture LEFT + Skills RIGHT */
     .about-left-full {
         display: flex;
         flex-direction: row;
@@ -293,7 +293,7 @@ body {
         margin: 0;
     }
 
-    /* ✅ Text BELOW picture + skills */
+    /* ✅ About text BELOW picture+skills */
     .about-right-full {
         margin-top: 30px;
         width: 100%;
