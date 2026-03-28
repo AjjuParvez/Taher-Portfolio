@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taher Parvez | Portfolio</title>
-
-    <!-- ✅ Correct CSS link -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,24 +11,21 @@
 
     <!-- ✅ FIXED NAVBAR -->
     <nav class="navbar">
-
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
         <a href="#contact" class="talk-btn">Let's Talk</a>
     </nav>
 
-    <!-- ✅ HOME / HERO SECTION -->
+    <!-- ✅ HOME / HERO -->
     <header class="hero" id="home">
 
-        <!-- LEFT SIDE -->
         <div class="hero-left">
 
-            <!-- MOBILE SOCIAL ICONS -->
+            <!-- ✅ MOBILE ICONS -->
             <div class="mobile-icons">
                 <a href="YOUR-LINKEDIN"><img src="linkedin.png" class="icon"></a>
                 <a href="YOUR-INSTAGRAM"><img src="instagram.jpeg" class="icon"></a>
@@ -42,20 +37,18 @@
             </h1>
 
             <p class="hero-text">
-                Experienced in warehouse operations, inventory optimization,
-                digital transformation, cost savings and Power BI automation.
+                Experienced in warehouse operations, inventory optimization, digital transformation,
+                cost savings and Power BI automation.
             </p>
 
             <a href="Taher-Resume.pdf" class="resume-btn">Download Resume</a>
             <a href="#about" class="learn-btn">Learn More</a>
-
         </div>
 
-        <!-- RIGHT SIDE -->
         <div class="hero-right">
             <img src="taher.jpeg" class="profile-img">
 
-            <!-- DESKTOP ICONS -->
+            <!-- ✅ DESKTOP ICONS -->
             <div class="desktop-icons">
                 <a href="YOUR-LINKEDIN"><img src="linkedin.png" class="icon"></a>
                 <a href="YOUR-INSTAGRAM"><img src="instagram.jpeg" class="icon"></a>
@@ -64,86 +57,86 @@
 
     </header>
 
- <!-- ✅ ABOUT SECTION — FULL SINGLE PAGE -->
-<section class="about section" id="about">
-    <h2>About Me</h2>
+    <!-- ✅ ABOUT PAGE (ONE-PAGE LAYOUT) -->
+    <section id="about" class="section about-section">
 
-    <div class="about-grid">
+        <h2 class="about-title">About Me</h2>
 
-        <!-- COLUMN 1 — PROFILE IMAGE -->
-        <div class="about-photo">
-            <img src="taher.jpeg" class="about-img">
-        </div>
+        <div class="about-wrapper">
 
-        <!-- COLUMN 2 — PASSION CONTENT -->
-        <div class="about-block">
-            <h3>Designing With Passion While Exploring The World</h3>
-            <p>
-                I am a results‑driven Warehouse & Logistics Supervisor with strong expertise in warehouse operations,
-                inventory accuracy, KPI dashboards, automation and operational excellence.
-            </p>
-            <p>
-                Skilled in Lean implementation, Power BI automation and productivity improvements. I believe in continuous
-                improvement and building sustainable processes that enhance customer service and maximize warehouse performance.
-            </p>
-            <p><strong>Let’s talk with me.</strong></p>
-            <p>contact: Ajjuparvez456@gmail.com</p>
-        </div>
+            <!-- ✅ LEFT: PHOTO + SKILLS -->
+            <div class="about-left-full">
 
-        <!-- COLUMN 3 — SOLUTIONS CONTENT -->
-        <div class="about-block">
-            <h3>I Create Solutions Not Just Reports</h3>
-            <p>
-                I specialize in developing performance dashboards, optimizing warehouse layouts, implementing process
-                improvements and improving GR/Putaway/Inventory KPIs.
-            </p>
-            <p>
-                With strong understanding of logistics operations, I blend practical experience with data‑driven decision‑making.
-            </p>
+                <img src="taher.jpeg" class="about-photo-small">
 
-            <div class="social-icons">
-                https://www.linkedin.com
-                    https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg
-                </a>
+                <div class="skills-under-photo">
+                    <h3 class="skill-title">Professional Skillset</h3>
 
-                https://www.instagram.com
-                    https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg
-                </a>
+                    <div class="skill">
+                        <span>Warehouse Operations</span>
+                        <div class="bar"><div style="width: 92%;"></div></div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Process Improvement / Lean</span>
+                        <div class="bar"><div style="width: 88%;"></div></div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Power BI Automation</span>
+                        <div class="bar"><div style="width: 83%;"></div></div>
+                    </div>
+
+                    <div class="skill">
+                        <span>Inventory & Space Management</span>
+                        <div class="bar"><div style="width: 95%;"></div></div>
+                    </div>
+
+                    <a href="Taher-Resume.pdf" class="resume-btn">Download CV</a>
+                </div>
+            </div>
+
+            <!-- ✅ RIGHT: CONTENT -->
+            <div class="about-right-full">
+
+                <div class="about-columns">
+
+                    <div class="about-block">
+                        <h3>Designing With Passion While Exploring The World</h3>
+                        <p>I am a results‑driven Warehouse & Logistics Supervisor with strong expertise in
+                        warehouse operations, inventory accuracy, KPI dashboards, automation and operational excellence.</p>
+                        <p>Skilled in Lean implementation and Power BI automation, I continuously drive improvements and sustainable processes.</p>
+                        <p><strong>Let’s talk with me.</strong></p>
+                        <p><strong>contact: Ajjuparvez456@gmail.com</strong></p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>I Create Solutions Not Just Reports</h3>
+                        <p>I specialize in performance dashboards, warehouse layout optimization, and improving GR/Putaway/Inventory KPIs.</p>
+                        <p>I focus on blending practical experience with data-driven decisions.</p>
+
+                        <div class="social-links">
+                            <a href="YOUR-LINKEDIN"><img src="linkedin.png"></a>
+                            <a href="YOUR-INSTAGRAM"><img src="instagram.jpeg"></a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
 
-    </div>
+    </section>
 
-    <!-- SKILLSET BELOW -->
-    <div class="skillset">
-        <h3>Professional Skillset</h3>
-
-        <div class="skill">Warehouse Operations</div>
-        <div class="bar"><div style="width: 90%;"></div></div>
-
-        <div class="skill">Process Improvement / Lean</div>
-        <div class="bar"><div style="width: 85%;"></div></div>
-
-        <div class="skill">Power BI Automation</div>
-        <div class="bar"><div style="width: 80%;"></div></div>
-
-        <div class="skill">Inventory & Space Management</div>
-        <div class="bar"><div style="width: 95%;"></div></div>
-
-        <div class="skill">Analyticl </div>
-        <div class="bar"><div style="width: 95%;"></div></div>
-    </div>
-</section>
-    <!-- ✅ PORTFOLIO SECTION -->
+    <!-- ✅ PORTFOLIO -->
     <section id="portfolio" class="section">
         <h2>Portfolio</h2>
 
         <div class="card">
             <h3>Experience</h3>
             <ul>
-                <li>Warehouse Senior Supervisor – Maersk</li>
-                <li>Operations Supervisor – YCH Group</li>
-                <li>Operations Supervisor – Sankyu Pte Ltd</li>
+                <li>Warehouse Senior Supervisor — Maersk</li>
+                <li>Operations Supervisor — YCH Group</li>
+                <li>Operations Supervisor — Sankyu Pte Ltd</li>
             </ul>
         </div>
 
@@ -152,22 +145,13 @@
             <ul>
                 <li>40% warehouse space optimization</li>
                 <li>Power BI automation dashboards</li>
-                <li>25% Lean efficiency improvement</li>
+                <li>25% efficiency improvement via Lean</li>
             </ul>
         </div>
 
-        <div class="card">
-            <h3>Skills</h3>
-            <ul>
-                <li>Warehouse Operations</li>
-                <li>Inventory & Space Management</li>
-                <li>Lean / 5S Improvements</li>
-                <li>Power BI Automation</li>
-            </ul>
-        </div>
     </section>
 
-    <!-- ✅ CONTACT SECTION -->
+    <!-- ✅ CONTACT -->
     <section id="contact" class="section">
         <h2>Contact</h2>
         <p>Email: <strong>Ajjuparvez456@gmail.com</strong></p>
@@ -178,6 +162,5 @@
         <p>© 2026 Taher Parvez. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
