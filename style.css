@@ -1,97 +1,58 @@
 /* GLOBAL */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: white;
-    color: #222;
-}
+body { margin: 0; font-family: Arial; background: #fff; color: #222; }
 
 /* ✅ NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 60px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 60px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .logo { font-size: 28px; font-weight: bold; color: #0033aa; }
 .nav-links { list-style: none; display: flex; gap: 32px; }
-.nav-links a { text-decoration: none; color: #333; }
+.nav-links a { text-decoration: none; color: #333; font-size: 16px; }
 .talk-btn {
-    background: #7a42f5;
-    padding: 10px 22px;
-    border-radius: 6px;
-    color: white;
-    text-decoration: none;
+    background: #7a42f5; padding: 10px 22px; border-radius: 6px;
+    color: white; text-decoration: none; font-weight: bold;
 }
 
-/* ✅ HERO SECTION */
+/* ✅ HERO SECTION DESKTOP */
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 60px;
-    flex-wrap: wrap;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 80px 60px; flex-wrap: wrap;
 }
 
 /* LEFT TEXT */
-.hero-left {
-    flex: 1 1 48%;
-}
+.hero-left { flex: 1 1 48%; }
 .hero-title { font-size: 46px; font-weight: bold; }
 .highlight { color: #7a42f5; }
-.hero-text { max-width: 500px; margin: 20px 0; }
+.hero-text { max-width: 480px; margin: 20px 0; color: #444; }
 
-/* Buttons */
-.resume-btn, .learn-btn {
-    padding: 12px 22px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-.resume-btn { background: #0033aa; color: white; margin-right: 10px; }
-.learn-btn { background: #ff5c5c; color: white; }
+/* BUTTONS */
+.resume-btn { background: #0033aa; padding: 12px 22px; color:white; border-radius:6px; margin-right:10px; }
+.learn-btn { background: #ff5c5c; padding: 12px 22px; color:white; border-radius:6px; }
 
 /* ✅ RIGHT IMAGE AREA */
-.hero-right {
-    flex: 1 1 48%;
-    text-align: right;
-}
-.hero-right img {
-    width: 350px;
-    border-radius: 12px;
-}
+.hero-right { flex: 1 1 48%; text-align: right; }
+.profile-img { width: 350px; border-radius: 12px; }
 
-/* ✅ DESKTOP ICONS */
+/* ✅ DESKTOP ICONS UNDER PHOTO */
 .desktop-icons {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 12px;
-    gap: 16px;
+    display: flex; justify-content: flex-end; margin-top: 12px; gap: 16px;
 }
 .icon { width: 32px; }
 
-/* ✅ MOBILE ICONS */
-.mobile-icons {
-    display: none;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+/* ✅ MOBILE ICONS HIDDEN ON DESKTOP */
+.mobile-icons { display: none; gap: 20px; justify-content: center; }
 
-/* ✅ MOBILE VIEW */
+/* ✅ MOBILE VIEW (NO CHANGE) */
 @media (max-width: 768px) {
+
     .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
+        flex-direction: column; text-align: center; padding: 40px 20px;
     }
-    .hero-right img {
-        width: 260px;
-        margin-bottom: 20px;
+    .profile-img {
+        width: 260px; margin-bottom: 20px;
     }
     .desktop-icons { display: none; }
-    .mobile-icons { display: flex; }
+    .mobile-icons { display: flex; margin-bottom: 20px; }
     .hero-title { font-size: 32px; }
 }
