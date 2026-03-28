@@ -1,159 +1,277 @@
 /* 🌟 RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Arial,sans-serif;color:#222;background:#fff;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fff;
+}
 
 /* ✅ NAVBAR */
-.navbar{
-position:fixed;top:0;width:100%;z-index:999;
-display:flex;justify-content:space-between;align-items:center;
-padding:16px 40px;background:rgba(255,255,255,0.92);
-backdrop-filter:blur(10px);border-bottom:1px solid #e6e6e6;}
-.nav-links{list-style:none;display:flex;gap:28px;}
-.nav-links a{text-decoration:none;color:#333;}
-.talk-btn{background:#7a42f5;color:#fff;padding:10px 22px;
-border-radius:6px;text-decoration:none;}
-
-/* ✅ HERO (Background fixed) */
-.hero{
-display:flex;justify-content:space-between;align-items:center;
-padding:160px 40px 60px;flex-wrap:wrap;
-
-background:
-linear-gradient(rgba(255,255,255,0.55),rgba(255,255,255,0.55)),
-url("warehouse-home.jpeg.jpg") center/cover no-repeat;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e6e6e6;
 }
 
-.hero-left{flex:1 1 48%;}
-.hero-title{font-size:42px;font-weight:bold;}
-.highlight{color:#7a42f5;}
-.hero-text{margin:20px 0;max-width:480px;}
-.resume-btn,.learn-btn{
-padding:12px 22px;border-radius:6px;text-decoration:none;
-font-weight:bold;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
 }
-.resume-btn{background:#0033aa;color:#fff;margin-right:10px;}
-.learn-btn{background:#ff5c5c;color:#fff;}
 
-.hero-right{text-align:right;flex:1 1 38%;}
-.profile-img{width:280px;border-radius:12px;}
-.desktop-icons,.mobile-icons{display:none;}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.talk-btn {
+    background: #7a42f5;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* ✅ HERO (HOME PAGE) */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 160px 40px 60px;
+    flex-wrap: wrap;
+
+    background:
+    linear-gradient(rgba(255,255,255,0.55),rgba(255,255,255,0.55)),
+    url("warehouse-home.jpeg.jpg") center/cover no-repeat;
+}
+
+.hero-left {
+    flex: 1 1 48%;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #7a42f5;
+}
+
+.hero-text {
+    margin: 20px 0;
+    max-width: 480px;
+}
+
+.resume-btn,
+.learn-btn {
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-btn {
+    background: #0033aa;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.learn-btn {
+    background: #ff5c5c;
+    color: #fff;
+}
+
+.hero-right {
+    text-align: right;
+    flex: 1 1 38%;
+}
+
+.profile-img {
+    width: 280px;
+    border-radius: 12px;
+}
+
+.desktop-icons,
+.mobile-icons {
+    display: none;
+}
 
 /* ✅ ABOUT SECTION */
-.about-section{background:#f5f7fb;padding:80px 20px;}
-.about-title{text-align:center;font-size:32px;margin-bottom:40px;}
+.about-section {
+    background: #f5f7fb;
+    padding: 80px 20px;
+}
 
-.about-wrapper{
-display:flex;gap:30px;align-items:flex-start;
-max-width:1200px;margin:auto;
+.about-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* LEFT COLUMN */
-.about-left-full{
-flex:1 1 35%;
-display:flex;
-flex-direction:column;
-align-items:center;
+.about-left-full {
+    flex: 1 1 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.about-photo{
-width:150px;
-border-radius:12px;
-margin-top:-10px;
+.about-photo {
+    width: 150px;
+    border-radius: 12px;
 }
 
 /* SKILLS */
-.skills-under-photo{
-width:100%;
-margin-top:10px;
-text-align:left;
+.skills-under-photo {
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
 }
-.skill-title{font-size:16px;font-weight:bold;margin-bottom:10px;}
-.skill{margin-bottom:12px;}
-.skill span{font-weight:bold;}
 
-.bar{
-height:7px;background:#e3e6ef;border-radius:7px;margin-top:5px;
+.skill-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-.bar div{
-height:100%;background:linear-gradient(90deg,#7A42F5,#FF5C5C);
-border-radius:7px;
+
+.skill {
+    margin-bottom: 12px;
+}
+
+.skill span {
+    font-weight: bold;
+}
+
+.bar {
+    height: 7px;
+    background: #e3e6ef;
+    border-radius: 7px;
+    margin-top: 5px;
+}
+
+.bar div {
+    height: 100%;
+    background: linear-gradient(90deg,#7A42F5,#FF5C5C);
+    border-radius: 7px;
 }
 
 /* RIGHT COLUMN */
-.about-right-full{
-flex:1 1 65%;
+.about-right-full {
+    flex: 1 1 65%;
 }
 
-.about-columns{
-display:flex;gap:30px;flex-wrap:wrap;
+.about-columns {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.about-block{
-flex:1 1 48%;
+.about-block {
+    flex: 1 1 48%;
 }
 
-.about-block h3{font-size:18px;margin-bottom:10px;}
-.about-block p{margin-bottom:10px;color:#444;line-height:1.6;}
-
-.social-links{
-display:flex;gap:12px;margin:10px 0;
-}
-.social-links img{width:22px;height:22px;}
-
-/* ✅ Email spacing */
-.about-email{
-margin-top:10px;
-margin-bottom:15px;
+.about-block h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-/* ✅ CV BUTTON BELOW ICONS */
-.cv-btn{
-margin-top:10px !important;
-display:inline-block;
+.about-block p {
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.6;
 }
 
-/* ✅✅ MOBILE VIEW FIXED */
-@media(max-width:768px){
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0;
+}
 
-    /* ✅ HERO – Picture FIRST & buttons fully visible */
+.social-links img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Email */
+.about-email {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* CV Button */
+.cv-btn {
+    margin-top: 12px !important;
+    display: inline-block;
+}
+
+/* ✅✅ MOBILE VIEW (HOME FIX + ABOUT FIX) */
+@media(max-width:768px) {
+
+    /* ✅ HERO – Move content UP, picture ON TOP */
     .hero {
         display: flex;
-        flex-direction: column-reverse;  /* puts picture ABOVE the text */
+        flex-direction: column-reverse;
         text-align: center;
-        padding-top: 300px;   /* ✅ increased so buttons fit */
-        padding-bottom: 140px;
+
+        padding-top: 180px;   /* ✅ Moved UP */
+        padding-bottom: 120px;
         padding-left: 20px;
         padding-right: 20px;
     }
 
     .profile-img {
-        width: 260px;              /* ✅ enlarged picture */
-        margin: 0 auto 25px auto;  /* ✅ space below image */
-        order: -1;                 /* ✅ force image to top */
+        width: 260px;   /* ✅ enlarge */
+        margin: 0 auto 20px auto;
+        order: -1;      /* ✅ picture first */
     }
 
-    /* ✅ Buttons spacing for mobile */
+    /* HOME BUTTONS FULLY VISIBLE */
     .resume-btn,
     .learn-btn {
-        display: inline-block;
+        display: block;
         width: 100%;
         max-width: 260px;
         margin: 10px auto;
     }
 
-    /* ✅ ABOUT SECTION MOBILE */
+    /* ✅ ABOUT PAGE MOBILE */
     .about-wrapper {
         flex-direction: column;
-        padding: 0 10px;
         width: 100%;
+        padding: 0 10px;
+        text-align: center;
     }
 
+    /* ✅ PIC LEFT + SKILLS RIGHT */
     .about-left-full {
         display: flex;
         flex-direction: row;
         gap: 20px;
         justify-content: center;
         align-items: flex-start;
+        width: 100%;
     }
 
     .about-left-full img {
@@ -162,13 +280,15 @@ display:inline-block;
     }
 
     .skills-under-photo {
-        text-align: left;
-        margin-top: 5px;
         width: auto;
+        text-align: left;
+        margin: 0;
     }
 
+    /* ✅ About text BELOW picture+skills */
     .about-right-full {
         margin-top: 30px;
+        width: 100%;
         text-align: center;
     }
 
