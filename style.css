@@ -17,51 +17,112 @@ backdrop-filter:blur(10px);border-bottom:1px solid #e6e6e6;}
 display:flex;justify-content:space-between;align-items:center;
 padding:160px 40px 60px;flex-wrap:wrap;
 background:linear-gradient(rgba(255,255,255,0.55),rgba(255,255,255,0.55)),
-url("warehouse-home.jpeg.jpg") center/cover no-repeat;}
+url("warehouse-home.jpeg") center/cover no-repeat;
+}
 .hero-left{flex:1 1 48%;}
 .hero-title{font-size:42px;font-weight:bold;}
 .highlight{color:#7a42f5;}
 .hero-text{margin:20px 0;max-width:480px;}
 .resume-btn,.learn-btn{padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:bold;}
-.resume-btn{background:#0033aa;color:white;margin-right:10px;}
-.learn-btn{background:#ff5c5c;color:white;}
+.resume-btn{background:#0033aa;color:#fff;margin-right:10px;}
+.learn-btn{background:#ff5c5c;color:#fff;}
 .hero-right{text-align:right;flex:1 1 38%;}
 .profile-img{width:280px;border-radius:12px;}
-.desktop-icons{display:flex;justify-content:flex-end;gap:10px;margin-top:10px;}
-.icon{width:22px;height:22px;}
+.desktop-icons{display:none;} /* ✅ Removed icons from home */
+.mobile-icons{display:none;}
 
-/* ✅ ABOUT */
+/* ✅ ABOUT SECTION */
 .about-section{background:#f5f7fb;padding:80px 20px;}
 .about-title{text-align:center;font-size:32px;margin-bottom:40px;}
-.about-wrapper{display:flex;gap:40px;align-items:flex-start;max-width:1200px;margin:auto;}
+
+.about-wrapper{
+display:flex;gap:30px;align-items:flex-start;
+max-width:1200px;margin:auto;
+}
+
+/* ✅ LEFT */
 .about-left-full{text-align:center;flex:1 1 28%;}
-.about-left-full img{
-width:150px;border-radius:12px;margin-top:-20px;margin-bottom:15px;
-box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+.about-photo{
+width:150px;border-radius:12px;
+margin-top:-20px;margin-bottom:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ✅ SKILLS */
 .skills-under-photo{
-width:80%;margin:0 auto;text-align:left;}
-.skill-title{font-size:16px;font-weight:bold;margin-bottom:12px;}
-.skill{margin-bottom:12px;}
+width:90%;margin:10px auto 0 auto;text-align:left;
+}
+.skill-title{font-size:16px;font-weight:bold;margin-bottom:10px;}
+.skill{margin-bottom:10px;}
 .skill span{font-weight:bold;}
-.bar{height:8px;background:#e3e6ef;border-radius:8px;margin-top:6px;}
-.bar div{height:100%;background:linear-gradient(90deg,#7A42F5,#FF5C5C);border-radius:8px;}
-.about-right-full{flex:1 1 65%;margin-top:-10px;}
+.bar{height:7px;background:#e3e6ef;border-radius:7px;margin-top:6px;}
+.bar div{height:100%;background:linear-gradient(90deg,#7A42F5,#FF5C5C);border-radius:7px;}
+
+/* ✅ RIGHT SIDE */
+.about-right-full{flex:1 1 65%;margin-top:0;}
 .about-columns{display:flex;gap:30px;flex-wrap:wrap;}
 .about-block{flex:1 1 48%;}
-.about-block h3{margin-bottom:10px;font-size:18px;}
+.about-block h3{font-size:18px;margin-bottom:10px;}
 .about-block p{margin-bottom:10px;color:#444;line-height:1.6;}
-.social-links{display:flex;gap:10px;margin-top:10px;}
-.social-links img{width:22px;height:22px;}
 
-/* ✅ MOBILE FIX */
+/* ✅ SOCIAL ICONS */
+.social-links{display:flex;gap:10px;margin:10px 0;}
+.social-links img{width:24px;height:24px;}
+
+/* ✅ CV BUTTON FIXED */
+.about-cv-btn{
+margin-top:22px;
+display:inline-block;
+}
+
+/* ✅ ✅ MOBILE FIX */
 @media(max-width:768px){
+
 .hero{text-align:center;padding:220px 20px 60px;flex-direction:column;}
-.profile-img{width:220px;margin:auto;margin-top:20px;}
-.desktop-icons{display:none;}
-.mobile-icons{display:flex;justify-content:center;gap:14px;}
-.about-wrapper{flex-direction:column;text-align:center;padding:0 10px;}
-.about-columns{flex-direction:column;}
-.about-block{text-align:center;width:100%;}
-.skills-under-photo{text-align:center;width:90%;}
-.about-left-full img{width:130px;margin-top:10px;}
+.profile-img{width:200px;margin:0 auto 20px;}
+
+.about-wrapper{
+flex-direction:column;
+text-align:center;
+padding:0 10px;
+}
+
+/* ✅ Picture + skills → 2‑column mobile layout */
+.about-left-full{
+display:flex;
+flex-direction:row;
+gap:20px;
+justify-content:center;
+align-items:flex-start;
+}
+
+.about-left-full img{
+width:120px;margin:0;
+}
+
+.skills-under-photo{
+text-align:left;
+margin:0;
+}
+
+.skill-title{text-align:left;}
+
+/* ✅ About text below */
+.about-right-full{
+margin-top:30px;
+text-align:center;
+}
+
+.about-columns{
+flex-direction:column;
+}
+
+.social-links{
+justify-content:center;
+}
+
+.about-cv-btn{
+margin:15px auto;
+}
+
 }
