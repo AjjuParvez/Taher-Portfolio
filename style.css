@@ -310,3 +310,10 @@ body {
         text-align: center;
     }
 }
+
+.about-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
