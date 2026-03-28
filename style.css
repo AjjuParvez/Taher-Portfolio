@@ -115,19 +115,24 @@ display:inline-block;
 /* ✅✅ MOBILE VIEW */
 @media(max-width:768px){
 
-    /* ✅ HERO – Put picture on TOP */
+    /* ✅ HERO – Picture FIRST & enough spacing */
     .hero {
         display: flex;
-        flex-direction: column-reverse; /* ✅ Puts image first */
+        flex-direction: column-reverse;   /* image first */
         text-align: center;
-        padding: 240px 20px 60px;
+
+        padding-top: 320px;   /* ✅ increased so About Me does NOT show */
+        padding-bottom: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .profile-img {
         width: 220px;
         margin: 0 auto 20px auto;
-        order: -1;   /* ✅ Force image ABOVE everything */
+        order: -1;   /* ✅ picture on top */
     }
+}
 
     /* ✅ ABOUT SECTION LAYOUT */
     .about-wrapper {
