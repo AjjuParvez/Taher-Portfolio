@@ -1,3 +1,9 @@
+// ✅ Hide all sections EXCEPT home on first load
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
+    document.querySelector("#home").style.display = "block";
+});
+
 // ✅ Show only selected section
 function showSection(id) {
     document.querySelectorAll(".section").forEach(sec => sec.style.display = "none");
@@ -12,7 +18,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", function (e) {
         e.preventDefault();
         const id = this.getAttribute("href");
-        showSection(id === "#home" ? "#home" : id);
+        showSection(id);
     });
 });
 
