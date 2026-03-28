@@ -168,7 +168,10 @@ body {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 180px 20px 40px;
+
+        /* ✅ FIX: Add extra padding so header does NOT overlap */
+        padding: 220px 20px 40px;  
+        /* ↑ increased from 180px → 220px */
 
         background:
             linear-gradient(
@@ -183,13 +186,9 @@ body {
         margin-bottom: 20px;
     }
 
-    .desktop-icons {
-        display: none;
-    }
+    .desktop-icons { display: none; }
 
-    .mobile-icons {
-        display: flex;
-    }
+    .mobile-icons { display: flex; }
 
     .hero-title {
         font-size: 32px;
