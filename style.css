@@ -1,203 +1,222 @@
-/* ---------------------------------------------------
-   GLOBAL STYLES
---------------------------------------------------- */
-body {
+/* 🌟 GLOBAL RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background: #ffffff;
     color: #222;
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
-    font-weight: bold;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ---------------------------------------------------
-   NAVBAR
---------------------------------------------------- */
+/* ✅ NAVBAR */
 .navbar {
-    background: #ffffff;
-    padding: 16px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 50;
-}
-
-.nav-brand {
-    font-size: 22px;
-    font-weight: bold;
-    color: #0d1b2a;
-}
-
-.nav-menu {
+    z-index: 998;
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.nav-links {
     list-style: none;
+    display: flex;
+    gap: 26px;
+}
+.nav-links a {
+    color: #333;
+    text-decoration: none;
 }
 
-.nav-menu a {
-    color: #0d1b2a;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.navbar .cta-btn {
-    background: #ff6b6b;
-    padding: 10px 18px;
+.talk-btn {
+    background: #7a42f5;
+    padding: 10px 22px;
     border-radius: 6px;
     color: white;
-    font-weight: bold;
+    text-decoration: none;
 }
 
-/* ---------------------------------------------------
-   ABOUT PAGE LAYOUT (ONE PAGE VIEW)
---------------------------------------------------- */
-.about {
-    padding: 140px 80px 80px;
+/* ✅ HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 160px 40px 60px;
+    flex-wrap: wrap;
+    background:
+      linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),
+      url("warehouse-home.jpeg.jpg") center/cover no-repeat;
+}
+
+.hero-left {
+    flex: 1 1 48%;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: bold;
+}
+.highlight {
+    color: #7a42f5;
+}
+.hero-text {
+    margin: 20px 0;
+    max-width: 480px;
+}
+
+.resume-btn, .learn-btn {
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.resume-btn { background: #0033aa; color: white; }
+.learn-btn { background: #ff5c5c; color: white; }
+
+.hero-right {
+    flex: 1 1 38%;
+    text-align: right;
+}
+.profile-img {
+    width: 290px;
+    border-radius: 14px;
+}
+.desktop-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+.icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* ✅ ABOUT SECTION */
+.about-section {
+    background: #f5f7fb;
+    padding: 80px 20px;
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-left-full {
+    flex: 1 1 28%;
     text-align: center;
 }
 
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-/* ✅ 3-column layout for desktop */
-.about-grid {
-    display: grid;
-    grid-template-columns: 260px 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-    margin-top: 20px;
-}
-
-/* Profile image */
-.about-img {
-    width: 260px;
-    height: 320px;
-    object-fit: cover;
+.about-photo-small {
+    width: 170px;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-}
-
-/* About text blocks */
-.about-block h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.about-block p {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 12px;
-    color: #444;
-}
-
-/* Social icons (LinkedIn + Instagram) */
-.social-icons {
-    display: flex;
-    gap: 14px;
-    margin-top: 15px;
-}
-
-.social-icons img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-
-/* ---------------------------------------------------
-   SKILLSET (Appears under about grid)
---------------------------------------------------- */
-.skillset {
-    margin-top: 50px;
-    text-align: left;
-}
-
-.skillset h3 {
-    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.skill {
-    margin-top: 10px;
-    margin-bottom: 6px;
-    font-size: 16px;
+.skills-under-photo {
+    text-align: left;
+    padding: 0 10px;
 }
+
+.skill {
+    margin-bottom: 15px;
+}
+.skill span { font-weight: bold; }
 
 .bar {
-    width: 100%;
     height: 10px;
-    background: #eaeaea;
+    background: #e3e6ef;
     border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 10px;
+    margin-top: 6px;
 }
-
 .bar div {
     height: 100%;
-    background: linear-gradient(to right, #8a2be2, #ff4757);
     border-radius: 10px;
+    background: linear-gradient(90deg,#7A42F5,#FF5C5C);
 }
 
-/* ---------------------------------------------------
-   FOOTER
---------------------------------------------------- */
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #0d1b2a;
-    color: #fff;
-    margin-top: 40px;
+.about-right-full {
+    flex: 1 1 68%;
 }
 
-/* ---------------------------------------------------
-   ✅ MOBILE LAYOUT (FULLY RESPONSIVE)
---------------------------------------------------- */
+.about-columns {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-block {
+    flex: 1 1 48%;
+}
+
+.about-block h3 { margin-bottom: 10px; }
+
+/* ✅ Social Icons */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.social-links img {
+    width: 22px;
+    height: 22px;
+}
+
+/* ✅ MOBILE FIXES */
 @media (max-width: 768px) {
 
-    .navbar {
-        padding: 16px 20px;
-    }
-
-    /* Stack content vertically */
-    .about-grid {
-        grid-template-columns: 1fr;
+    .hero {
+        flex-direction: column;
+        padding: 200px 20px 60px;
         text-align: center;
     }
 
-    .about-img {
-        margin: 0 auto;
-        width: 200px;
-        height: 240px;
+    .profile-img {
+        width: 220px;
+        margin: auto;
+        margin-top: 20px;
     }
 
-    .social-icons {
-        justify-content: center;
-    }
+    .desktop-icons { display: none; }
+    .mobile-icons { display: flex; justify-content: center; gap: 15px; }
 
-    .about {
-        padding: 120px 20px 40px;
-    }
-
-    .skillset {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
         padding: 0 10px;
     }
 
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+    .about-columns {
+        flex-direction: column;
+    }
+
+    .about-block {
+        text-align: center;
+        width: 100%;
+    }
+
+    .skills-under-photo {
+        text-align: center;
+    }
+
+    .about-left-full img {
+        width: 150px;
     }
 }
