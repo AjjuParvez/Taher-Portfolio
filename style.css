@@ -54,22 +54,20 @@ body {
     text-decoration: none;
 }
 
-/* ✅ HERO (HOME PAGE ONLY) with PREMIUM GRADIENT */
+/* ✅ HERO (HOME PAGE ONLY) */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 140px 60px 40px;
+    padding: 140px 60px 40px;   /* ✅ Reduced top spacing */
     gap: 35px;
     flex-wrap: wrap;
 
-    /* ✅ PREMIUM PURPLE–BLUE GRADIENT OVERLAY */
     background:
         linear-gradient(
-            135deg,
-            rgba(123, 67, 255, 0.55),
-            rgba(0, 102, 255, 0.45)
+            rgba(255,255,255,0.55),
+            rgba(255,255,255,0.55)
         ),
         url("warehouse-home.jpeg.jpg") center/cover no-repeat;
 }
@@ -149,11 +147,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* ✅ CONTRAST BACKGROUND FOR OTHER PAGES */
+/* ✅ OTHER SECTIONS (ABOUT / PORTFOLIO / CONTACT) */
 .section {
     padding: 80px 20px;
-    background: #f5f7fb;       /* light grey-blue for contrast */
-    border-top: 1px solid #e2e3e6;
+    background: #f5f6fa;        /* ✅ Soft contrast background */
+    border-top: 1px solid #e6e6e6;
 }
 
 .card {
@@ -195,33 +193,5 @@ body {
 
     .hero-title {
         font-size: 32px;
-    }
-}
-/* ✅ Fade-in */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease forwards;
-}
-
-/* ✅ Slide-up for image */
-.slide-up {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: slideUp 1.2s ease forwards;
-}
-
-/* ✅ Keyframes */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
