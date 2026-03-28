@@ -14,23 +14,19 @@ body {
     padding: 18px 60px;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 .logo { font-size: 28px; font-weight: bold; color: #0033aa; }
-.nav-links { list-style: none; display: flex; gap: 30px; }
-.nav-links a { text-decoration: none; color: #333; font-size: 16px; }
+.nav-links { list-style: none; display: flex; gap: 32px; }
+.nav-links a { text-decoration: none; color: #333; }
 .talk-btn {
     background: #7a42f5;
     padding: 10px 22px;
-    color: white;
     border-radius: 6px;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-/* ✅ HERO SECTION DESKTOP */
+/* ✅ HERO SECTION */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -39,71 +35,52 @@ body {
     flex-wrap: wrap;
 }
 
-/* LEFT */
-.hero-left { flex: 1 1 48%; }
+/* LEFT TEXT */
+.hero-left {
+    flex: 1 1 48%;
+}
+.hero-title { font-size: 46px; font-weight: bold; }
+.highlight { color: #7a42f5; }
+.hero-text { max-width: 500px; margin: 20px 0; }
 
-/* TITLE */
-.hero-title {
-    font-size: 46px;
+/* Buttons */
+.resume-btn, .learn-btn {
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
     font-weight: bold;
-    line-height: 1.3;
 }
-.highlight {
-    color: #7a42f5;
-}
+.resume-btn { background: #0033aa; color: white; margin-right: 10px; }
+.learn-btn { background: #ff5c5c; color: white; }
 
-/* TEXT */
-.hero-text {
-    margin: 20px 0 30px 0;
-    max-width: 480px;
-    color: #444;
-}
-
-/* BUTTONS */
-.resume-btn {
-    background: #0033aa;
-    padding: 12px 22px;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-right: 10px;
-}
-.learn-btn {
-    background: #ff5c5c;
-    padding: 12px 22px;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
-/* RIGHT IMAGE */
+/* ✅ RIGHT IMAGE AREA */
 .hero-right {
     flex: 1 1 48%;
     text-align: right;
 }
 .hero-right img {
-    width: 340px;
-    border-radius: 14px;
+    width: 350px;
+    border-radius: 12px;
 }
 
-/* ✅ DESKTOP ICONS (RIGHT SIDE BELOW IMAGE) */
+/* ✅ DESKTOP ICONS */
 .desktop-icons {
     display: flex;
     justify-content: flex-end;
-    gap: 18px;
-    margin-top: 15px;
+    margin-top: 12px;
+    gap: 16px;
 }
 .icon { width: 32px; }
 
 /* ✅ MOBILE ICONS */
 .mobile-icons {
     display: none;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-/* ✅ Responsive */
+/* ✅ MOBILE VIEW */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -114,7 +91,7 @@ body {
         width: 260px;
         margin-bottom: 20px;
     }
-    .desktop-icons { display: none !important; }
-    .mobile-icons { display: flex !important; }
+    .desktop-icons { display: none; }
+    .mobile-icons { display: flex; }
     .hero-title { font-size: 32px; }
 }
