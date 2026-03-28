@@ -235,8 +235,8 @@ body {
         flex-direction: column-reverse;
         text-align: center;
 
-        padding-top: 100px;   /* ✅ Moved UP */
-        padding-bottom: 80px;
+        padding-top: 50px;   /* ✅ Moved UP */
+        padding-bottom: 30px;
         padding-left: 20px;
         padding-right: 20px;
     }
