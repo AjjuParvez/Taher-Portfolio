@@ -26,14 +26,24 @@ body {
     text-decoration: none;
 }
 
-/* ✅ HERO SECTION */
+/* ✅ HERO SECTION (DESKTOP FIXED) */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 60px;
-    gap: 40px;
+
+    /* ✅ Reduced padding so the image and icons move up */
+    padding: 40px 60px;      /* was 80px → now 40px */
+    
+    gap: 35px;
     flex-wrap: wrap;
+
+    /* ✅ Softened background layer to improve text readability */
+    background: linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.75)
+    ), 
+    url("warehouse-bg.jpeg") center/cover no-repeat;
 }
 
 /* ✅ LEFT TEXT */
@@ -62,16 +72,18 @@ body {
     min-width: 260px;
 }
 .profile-img {
-    width: 350px;
+    width: 300px;           /* was 350 → reduced to show icons */
     border-radius: 14px;
 }
 
-/* ✅ DESKTOP ICONS */
+/* ✅ DESKTOP ICONS (NOW VISIBLE) */
 .desktop-icons {
     display: flex;
     justify-content: flex-end;
-    gap: 14px;
-    margin-top: 14px;
+    gap: 12px;
+
+    /* ✅ Pull icons closer to the image */
+    margin-top: 10px;
 }
 .icon {
     width: 30px;
@@ -86,7 +98,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* ✅ MOBILE FIXES */
+/* ✅ MOBILE FIXES (UNCHANGED & PERFECT) */
 @media (max-width: 768px) {
 
     .hero {
