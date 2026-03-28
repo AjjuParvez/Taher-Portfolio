@@ -226,44 +226,45 @@ body {
     display: inline-block;
 }
 
-/* ✅✅ MOBILE VIEW (HOME FIX + ABOUT FIX) */
+/* ✅✅ MOBILE VIEW (FINAL FIXED HOME + ABOUT) */
 @media(max-width:768px) {
 
-    /* ✅ HERO – Move content UP, picture ON TOP */
+    /* ✅ HERO — Move ALL content UP, image FIRST */
     .hero {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* ✅ Image at top */
         text-align: center;
 
-        padding-top: 40px;   /* ✅ Moved UP */
-        padding-bottom: 40px;
+        padding-top: 110px !important;  /* ✅ pulled UP */
+        padding-bottom: 80px !important;
         padding-left: 20px;
         padding-right: 20px;
     }
 
-/* ✅ Reduce Home Page Hero Title on Mobile */
-.hero-title{
-    font-size: 16px !important;
-    line-height: 16px !important;
-    font-weight: bold;
-}
-
+    /* ✅ Bigger & clean spacing */
     .profile-img {
-        width: 260px;   /* ✅ enlarge */
-        margin: 0 auto 20px auto;
-        order: -1;      /* ✅ picture first */
+        width: 260px;
+        margin: 0 auto 15px auto;
+        order: -1; /* ✅ Image first */
     }
 
-    /* HOME BUTTONS FULLY VISIBLE */
+    /* ✅ Mobile title size */
+    .hero-title {
+        font-size: 26px !important;
+        line-height: 30px !important;
+        font-weight: bold;
+    }
+
+    /* ✅ Buttons perfectly visible */
     .resume-btn,
     .learn-btn {
         display: block;
-        width:80%;
-        max-width: 160px;
-        margin: 6px auto;
+        width: 80%;
+        max-width: 200px;
+        margin: 8px auto;
     }
 
-    /* ✅ ABOUT PAGE MOBILE */
+    /* ✅ ABOUT SECTION - Mobile Layout */
     .about-wrapper {
         flex-direction: column;
         width: 100%;
@@ -271,7 +272,7 @@ body {
         text-align: center;
     }
 
-    /* ✅ PIC LEFT + SKILLS RIGHT */
+    /* ✅ Picture LEFT - Skills RIGHT */
     .about-left-full {
         display: flex;
         flex-direction: row;
@@ -292,7 +293,7 @@ body {
         margin: 0;
     }
 
-    /* ✅ About text BELOW picture+skills */
+    /* ✅ Text BELOW picture + skills */
     .about-right-full {
         margin-top: 30px;
         width: 100%;
