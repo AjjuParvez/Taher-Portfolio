@@ -115,53 +115,96 @@ display:inline-block;
 /* ✅✅ MOBILE VIEW */
 @media(max-width:768px){
 
+/* ✅ HOME PAGE hero fix */
 .hero{
-flex-direction:column;
-text-align:center;
-padding:220px 20px 60px;
+    flex-direction:column;       /* ✅ Put image on top */
+    text-align:center;
+    padding: 180px 20px 60px;
 }
 
+/* ✅ Profile picture on top */
 .profile-img{
-width:200px;margin:auto;margin-top:10px;
+    width:180px;
+    margin:auto;
+    margin-bottom:20px;   /* ✅ add spacing */
+    border-radius:12px;
 }
 
-/* ✅ PIC LEFT + SKILLS RIGHT */
+/* ✅ Hero-left (text) below image */
+.hero-left{
+    order:2;
+    width:100%;
+}
+
+.hero-title{
+    font-size:28px;
+    line-height:34px;
+}
+
+.hero-text{
+    max-width:100%;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+/* ✅ Buttons center aligned */
+.resume-btn,.learn-btn{
+    margin-top:12px;
+}
+
+/* ✅ ICONS mobile fix */
+.mobile-icons{
+    display:flex !important;
+    justify-content:center;
+    gap:16px;
+    margin-top:10px;
+}
+
+/* ✅ Hide desktop icons */
+.desktop-icons{
+    display:none !important;
+}
+
+/* ✅ ABOUT PAGE (unchanged – working perfect) */
 .about-wrapper{
-flex-direction:column;
-padding:0 10px;
+    flex-direction:column;
+    padding:0 10px;
 }
 
 .about-left-full{
-display:flex;
-flex-direction:row;
-gap:20px;
-justify-content:center;
-align-items:flex-start;
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+    justify-content:center;
+    align-items:flex-start;
 }
 
 .about-left-full img{
-width:120px;margin:0;
+    width:120px;
+    margin:0;
 }
 
 .skills-under-photo{
-width:auto;margin:0;text-align:left;
+    width:auto;
+    margin:0;
+    text-align:left;
 }
 
-/* ✅ TEXT BELOW */
 .about-right-full{
-margin-top:25px;
-text-align:center;
+    margin-top:25px;
+    text-align:center;
 }
 
 .about-columns{
-flex-direction:column;
+    flex-direction:column;
 }
 
 .social-links{
-justify-content:center;
+    justify-content:center;
 }
 
 .cv-btn{
-margin:20px auto !important;
+    margin:20px auto !important;
 }
+
 }
