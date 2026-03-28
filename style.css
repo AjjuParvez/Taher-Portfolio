@@ -115,96 +115,67 @@ display:inline-block;
 /* ✅✅ MOBILE VIEW */
 @media(max-width:768px){
 
-/* ✅ HOME PAGE hero fix */
-.hero{
-    flex-direction:column;       /* ✅ Put image on top */
-    text-align:center;
-    padding: 180px 20px 60px;
-}
+    /* ✅ HERO – Put picture on TOP */
+    .hero {
+        display: flex;
+        flex-direction: column-reverse; /* ✅ Puts image first */
+        text-align: center;
+        padding: 240px 20px 60px;
+    }
 
-/* ✅ Profile picture on top */
-.profile-img{
-    width:180px;
-    margin:auto;
-    margin-bottom:20px;   /* ✅ add spacing */
-    border-radius:12px;
-}
+    .profile-img {
+        width: 220px;
+        margin: 0 auto 20px auto;
+        order: -1;   /* ✅ Force image ABOVE everything */
+    }
 
-/* ✅ Hero-left (text) below image */
-.hero-left{
-    order:2;
-    width:100%;
-}
+    /* ✅ ABOUT SECTION LAYOUT */
+    .about-wrapper {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
 
-.hero-title{
-    font-size:28px;
-    line-height:34px;
-}
+    /* ✅ Picture LEFT + Skills RIGHT on Mobile */
+    .about-left-full {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
 
-.hero-text{
-    max-width:100%;
-    font-size:15px;
-    margin-bottom:15px;
-}
+    .about-left-full img {
+        width: 120px;
+        margin: 0;
+    }
 
-/* ✅ Buttons center aligned */
-.resume-btn,.learn-btn{
-    margin-top:12px;
-}
+    .skills-under-photo {
+        width: auto;
+        margin: 0;
+        text-align: left;
+    }
 
-/* ✅ ICONS mobile fix */
-.mobile-icons{
-    display:flex !important;
-    justify-content:center;
-    gap:16px;
-    margin-top:10px;
-}
+    /* ✅ About text BELOW picture + skills */
+    .about-right-full {
+        margin-top: 25px;
+        text-align: center;
+        width: 100%;
+    }
 
-/* ✅ Hide desktop icons */
-.desktop-icons{
-    display:none !important;
-}
+    .about-columns {
+        flex-direction: column;
+    }
 
-/* ✅ ABOUT PAGE (unchanged – working perfect) */
-.about-wrapper{
-    flex-direction:column;
-    padding:0 10px;
-}
+    /* ✅ Center social icons */
+    .social-links {
+        justify-content: center;
+    }
 
-.about-left-full{
-    display:flex;
-    flex-direction:row;
-    gap:20px;
-    justify-content:center;
-    align-items:flex-start;
-}
-
-.about-left-full img{
-    width:120px;
-    margin:0;
-}
-
-.skills-under-photo{
-    width:auto;
-    margin:0;
-    text-align:left;
-}
-
-.about-right-full{
-    margin-top:25px;
-    text-align:center;
-}
-
-.about-columns{
-    flex-direction:column;
-}
-
-.social-links{
-    justify-content:center;
-}
-
-.cv-btn{
-    margin:20px auto !important;
-}
-
+    /* ✅ Center CV button */
+    .cv-btn {
+        margin: 20px auto !important;
+    }
 }
