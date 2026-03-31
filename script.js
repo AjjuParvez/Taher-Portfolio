@@ -16,7 +16,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     });
 });
 
-// ✅ Learn More button
+// ✅ Learn More → About
 document.querySelectorAll(".learn-btn").forEach(btn => {
     btn.addEventListener("click", e => {
         e.preventDefault();
