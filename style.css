@@ -11,6 +11,11 @@ body {
     background: #fff;
 }
 
+/* ✅ Hide all sections by default */
+.section {
+    display: none;
+}
+
 /* ✅ NAVBAR */
 .navbar {
     position: fixed;
@@ -45,7 +50,7 @@ body {
     text-decoration: none;
 }
 
-/* ✅ HERO (Auto Responsive for all screens) */
+/* ✅ HERO (FULL SCREEN FIX) */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -55,7 +60,7 @@ body {
     background:
         linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
         url("warehouse-home.jpeg.jpg") center/cover no-repeat;
-    min-height: 70vh; /* ✅ auto adjust height */
+    min-height: 100vh;   /* ✅ Always full screen */
 }
 
 .hero-left {
@@ -108,7 +113,7 @@ body {
     border-radius: 14px;
 }
 
-/* ✅ ABOUT SECTION (unchanged) */
+/* ✅ ABOUT SECTION */
 .about-section {
     background: #f5f7fb;
     padding: 80px 20px;
@@ -171,7 +176,7 @@ body {
         flex-direction: column-reverse;
         text-align: center;
         padding: 120px 20px 60px;
-        min-height: auto;
+        min-height: 100vh;
     }
 
     .hero-title {
