@@ -9,11 +9,17 @@ body {
     font-family: Arial, sans-serif;
     color: #222;
     background: #fff;
+    overflow-x: hidden;
 }
 
 /* ✅ Hide all sections by default */
+.section { display: none; }
+
+/* ✅ GLOBAL BACKGROUND (same as Home) */
 .section {
-    display: none;
+    background:
+        linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
+        url("warehouse-home.jpeg.jpg") center/cover no-repeat;
 }
 
 /* ✅ NAVBAR */
@@ -40,6 +46,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #333;
+    font-weight: bold;
 }
 
 .talk-btn {
@@ -50,27 +57,24 @@ body {
     text-decoration: none;
 }
 
-/* ✅ HERO (Desktop Final Layout Like Your Reference) */
+/* ✅ HERO (FULL SCREEN & CENTERED) */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 140px 80px 80px;
-    background:
-        linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)),
-        url("warehouse-home.jpeg.jpg") center/cover no-repeat;
-    min-height: 100vh;
+    padding: 140px 40px 80px;
+    flex-wrap: wrap;
+    min-height: 100vh; /* ✅ No scroll */
 }
 
 .hero-left {
-    flex: 1;
-    max-width: 550px;
+    flex: 1 1 480px;
+    max-width: 600px;
 }
 
 .hero-title {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 42px;
+    font-weight: bold;
 }
 
 .highlight {
@@ -78,19 +82,17 @@ body {
 }
 
 .hero-text {
-    margin: 22px 0;
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 440px;
+    margin: 20px 0;
+    max-width: 480px;
 }
 
 .resume-btn,
 .learn-btn {
-    padding: 14px 26px;
+    padding: 12px 22px;
     border-radius: 6px;
-    font-weight: bold;
-    font-size: 15px;
     text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
 }
 
 .resume-btn {
@@ -104,24 +106,22 @@ body {
     color: #fff;
 }
 
-/* ✅ Right Image Section */
 .hero-right {
-    flex: 1;
+    flex: 1 1 350px;
     display: flex;
     justify-content: center;
 }
 
 .profile-img {
-    width: 340px;
-    border-radius: 16px;
-    object-fit: cover;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    width: 320px;
+    max-width: 90%;
+    border-radius: 14px;
 }
 
 /* ✅ ABOUT SECTION */
 .about-section {
-    background: #f5f7fb;
-    padding: 80px 20px;
+    padding: 100px 20px;
+    min-height: 100vh;
 }
 
 .about-title {
@@ -133,16 +133,8 @@ body {
 .about-wrapper {
     display: flex;
     gap: 30px;
-    align-items: flex-start;
     max-width: 1200px;
     margin: auto;
-}
-
-.about-left-full {
-    flex: 1 1 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .about-photo {
@@ -156,79 +148,15 @@ body {
     text-align: left;
 }
 
-.skill-title { font-size: 16px; font-weight: bold; margin-bottom: 10px; }
-.skill { margin-bottom: 12px; }
-.skill span { font-weight: bold; }
-.bar { height: 7px; background: #e3e6ef; border-radius: 7px; margin-top: 5px; }
+.skill-title { margin-bottom: 10px; font-weight: bold; }
+
+.bar { height: 7px; background: #ddd; border-radius: 7px; margin-top: 5px; }
 .bar div { height: 100%; background: linear-gradient(90deg,#7A42F5,#FF5C5C); border-radius: 7px; }
-
-.about-right-full { flex: 1 1 65%; }
-.about-columns { display: flex; gap: 30px; flex-wrap: wrap; }
-.about-block { flex: 1 1 48%; }
-.about-block h3 { font-size: 18px; margin-bottom: 10px; }
-.about-block p { margin-bottom: 10px; color: #444; line-height: 1.6; }
-
-.social-links { display: flex; gap: 12px; margin: 10px 0; }
-.social-links img { width: 22px; height: 22px; }
-
-.about-email { margin-top: 10px; margin-bottom: 15px; }
-.cv-btn { margin-top: 12px !important; display: inline-block; }
-
-/* ✅ MOBILE HERO RESPONSIVE FIX */
-@media(max-width:768px){
-
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 120px 20px 60px;
-        min-height: 100vh;
-    }
-
-    .hero-title {
-        font-size: 28px;
-        line-height: 34px;
-    }
-
-    .hero-text {
-        font-size: 15px;
-    }
-
-    .profile-img {
-        width: 240px;
-        margin-bottom: 20px;
-    }
-
-    .resume-btn,
-    .learn-btn {
-        width: 90%;
-        max-width: 260px;
-        margin: 10px auto;
-        display: block;
-    }
-
-    .about-wrapper {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    .about-left-full { flex-direction: row; gap: 20px; }
-    .about-left-full img { width: 120px; }
-    .skills-under-photo { margin: 0; text-align: left; }
-    .about-right-full { margin-top: 20px; }
-    .about-columns { flex-direction: column; }
-}
 
 /* ✅ PORTFOLIO SECTION */
 .portfolio-section {
-    background: #fff;
-    padding: 80px 20px;
-}
-
-.portfolio-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
+    padding: 100px 20px;
+    min-height: 100vh;
 }
 
 .portfolio-wrapper {
@@ -240,7 +168,7 @@ body {
 }
 
 .portfolio-card {
-    background: #ffffff;
+    background: #ffffffdd;
     padding: 25px;
     border-radius: 12px;
     flex: 1 1 31%;
@@ -248,55 +176,34 @@ body {
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-.portfolio-card img { display: none !important; }
-
-.portfolio-card h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
+/* ✅ CONTACT SECTION */
+#contact {
+    padding: 100px 20px;
+    min-height: 100vh;
+    text-align: center;
 }
 
-.portfolio-card ul {
-    list-style: none;
-    padding-left: 0;
-}
+/* ✅ MOBILE FIX */
+@media(max-width:768px){
 
-.portfolio-card ul li {
-    margin-bottom: 10px;
-    font-size: 15px;
-    line-height: 1.6;
-}
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 120px 20px 60px;
+    }
 
-/* ✅ TIMELINE */
-.timeline { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 25px; 
-}
-.timeline-item { 
-    padding-left: 10px; 
-    border-left: 3px solid #7a42f5; 
-}
-.year { 
-    font-size: 16px; 
-    font-weight: bold; 
-    color: #7a42f5; 
-    margin-bottom: 6px; 
-    display: block; 
-}
+    .hero-title { font-size: 26px; }
+    .hero-text { font-size: 14px; }
 
-.sub-list {
-    margin-top: 6px;
-    margin-left: 10px;
-    padding-left: 12px;
-    border-left: 3px solid #ddd;
-}
+    .profile-img { width: 220px; }
 
-.big-saving {
-    font-size: 22px;
-    font-weight: bold;
-    color: #7a42f5;
-}
+    .resume-btn,
+    .learn-btn {
+        width: 90%;
+        max-width: 220px;
+        margin: 10px auto;
+    }
 
-@media(max-width:768px) {
-    .portfolio-wrapper { flex-direction: column; gap: 20px; }
+    .about-wrapper { flex-direction: column; text-align: center; }
+    .portfolio-wrapper { flex-direction: column; }
 }
